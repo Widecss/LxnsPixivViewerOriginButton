@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Lxns Pixiv Viewer Booster
 // @namespace    https://www.widecss.cn/
-// @version      0.8
+// @version      0.9
 // @description  为 Lxns 的 Pixiv Viewer 添加一个按扭, 用于跳转到原地址
 // @author       Widecss
 // @homepage     https://github.com/Widecss/LxnsPixivViewerOriginButton
 // @supportURL   https://github.com/Widecss/LxnsPixivViewerOriginButton/issues
 // @match        https://pixiv.lxns.org/artworks/*
+// @match        https://pixiv.lxns.org/i/*
 // @icon         https://pixiv.lxns.org/static/favicon.png
 // @grant        none
 // @license      MIT License
@@ -41,8 +42,14 @@
         );
         $('#' + BUTTON_ID).bind('click', () => {
             let url = window.location.pathname;
-            let pixiv_id = url.substring(10);
-            window.location.href = PIXIV_URL + pixiv_id;
+            if(url.startsWith('/i')){
+                let pixiv_id = url.substring(10);
+                window.location.href = PIXIV_URL + pixiv_id;
+            }
+            if(url.startsWith('/artworks')){
+                let pixiv_id = url.substring(10);
+                window.location.href = PIXIV_URL + pixiv_id;
+            }
         });
     }
     setInterval(function () {
