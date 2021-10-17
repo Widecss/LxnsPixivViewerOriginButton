@@ -1,13 +1,12 @@
 // ==UserScript==
 // @name         Lxns Pixiv Viewer Booster
-// @namespace    https://www.widecss.cn/
-// @version      0.9
+// @namespace    https://github.com/Widecss
+// @version      1.0
 // @description  为 Lxns 的 Pixiv Viewer 添加一个按扭, 用于跳转到原地址
 // @author       Widecss
 // @homepage     https://github.com/Widecss/Widecss-tampermonkey-script
 // @supportURL   https://github.com/Widecss/Widecss-tampermonkey-script/issues
-// @match        https://pixiv.lxns.org/artworks/*
-// @match        https://pixiv.lxns.org/i/*
+// @include      /https?://pixiv.lxns.org/(artworks|i).*/
 // @icon         https://pixiv.lxns.org/static/favicon.png
 // @require      https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js
 // @grant        none
