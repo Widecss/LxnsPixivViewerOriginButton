@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         屏蔽 BiliBili 的广告
-// @namespace    Widecss
+// @namespace    https://github.com/Widecss/Widecss-tampermonkey-script
 // @version      1.0
 // @description  仅包含删除 BiliBili 首页出现的广告的功能
 // @author       Widecss
