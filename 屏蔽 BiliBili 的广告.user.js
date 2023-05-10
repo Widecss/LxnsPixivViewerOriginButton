@@ -15,17 +15,8 @@
 (function() {
     'use strict';
     setInterval(()=>{
-        for (let card of document.getElementsByClassName('feed-card')) {
-            if (card.getElementsByClassName("bili-video-card__info--ad").length > 0) {
-                card.remove();
-            }
-        }
-    }, 1000);
-    setInterval(()=>{
-        for (let card of document.getElementsByClassName('bili-video-card is-rcmd')) {
-            if (card.getElementsByClassName("bili-video-card__info--ad").length > 0) {
-                card.remove();
-            }
+        for (let card of document.getElementsByClassName('bili-video-card__info--ad')) {
+            card.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.style.visibility = "hidden";
         }
     }, 1000);
 })();
